@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+   
+   <style>
+      
+      .container-fluid{
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .row{
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      .bg-light{
+        background-color: green !important;
+      }
+
+      .col-4{
+        background-color: #f8f9fa;
+        padding-bottom: 100%;
+      }
+
+      .list-group-item{
+        background-color: #f8f9fa;
+      }
+      .list-group-item.active{
+        background-color: green;
+        border-color: green;  
+      }
+
+      .deadline{
+        float: right;
+        font-size: 13px;
+      }
+
+    </style>
+
+    <title>ToDo Manager!</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-light bg-light" style="padding-top: 0.3rem;padding-bottom: 0.3rem;">
+
+        <div class="d-flex justify-content-between align-items-center" style="width: 100%">
+
+
+            <a class="navbar-brand" href="#">
+              <img src="http://vivaiinghilleri.altervista.org/img/logo_BITBAT.bmp" width="40" height="30" alt="">
+            </a>
+
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <!--button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button-->
+            </form>
+
+              <i class="bi bi-person-circle" style="font-size: 2rem; color: #f8f9fa"></i>
+
+        </div>
+      </nav>
+
+        <div class="row">
+          <div class="col-4 ">
+            <div class="list-group list-group-flush" style="padding-top: 10px;" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="All">All</a>
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Important</a>
+              <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Today</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Next 7 Days</a>
+              <a class="list-group-item list-group-item-action" id="list-private-list" data-toggle="list" href="#list-private" role="tab" aria-controls="private">Private</a>            
+            </div>
+          </div>
+          <div class="col-8">
+
+            <div class="tab-content" style="padding-top: 10px;" id="nav-tabContent">
+              <div class="tab-pane fade show active"  id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+               
+                <h1>All</h1>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" style="background-color: white;">                  
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <p class="deadline">Monday 22 March 2021 at 14:30</p>
+                  </li>
+                  <li class="list-group-item" style="background-color: white;">                  
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <p class="deadline">Monday 22 March 2021 at 14:30</p>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><h1>Important</h1></div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><h1>Today</h1></div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><h1>Next 7 Days</h1></div>
+              <div class="tab-pane fade" id="list-private" role="tabpanel" aria-labelledby="list-private-list"><h1>Private</h1></div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+      
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
